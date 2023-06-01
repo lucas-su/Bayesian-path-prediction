@@ -1,1 +1,49 @@
 \documentclass{article}
+\usepackage{multicol}
+\usepackage[a4paper, total={18cm, 24cm}, top=1cm]{geometry}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{apacite}
+
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{\thesection}{4pt}{}
+
+\newcommand{\longtitle}{Long big title}
+\newcommand{\shorttitle}{Shorter smaller title}
+
+
+\fancypagestyle{firststyle}
+{
+\vspace{1.5cm}
+\setlength{\parskip}{1em}
+\setlength{\headsep}{2.5cm}
+
+
+\fancyhf{}
+\chead{
+{\Huge \longtitle \\}Luc Schoot Uiterkamp ~$\cdot$~ Christophe van der Walt ~$\cdot$~ University of Twente  ~$\cdot$~ \today}
+}
+
+
+\begin{document}
+\thispagestyle{firststyle}
+\begin{multicols}{2}
+  \input{00 abstract.tex}
+  \input{01 introduction.tex}
+  \input{02 related work.tex}
+  \input{03 method.tex}
+  \input{04 results.tex}
+  \input{05 discussion.tex}
+  \input{06 appendices.tex}
+
+\bibliographystyle{apacite}
+\bibliography{C://users//admin//pacof//notes/library}
+
+\end{multicols}
+
+\end{document}
